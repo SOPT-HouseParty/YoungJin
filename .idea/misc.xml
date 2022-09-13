@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/dice_1.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.20380434782608695" />
+        <entry key="app/src/main/res/layout/activity_color_my_view_example.xml" value="0.23254852294921877" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1364898681640625" />
       </map>
     </option>
   </component>
@@ -13,5 +14,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.20380434782608695" />
+      </ProjectState>
+    </option>
   </component>
 </project>
