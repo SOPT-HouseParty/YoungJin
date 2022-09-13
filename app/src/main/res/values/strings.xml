@@ -7,4 +7,9 @@
     <string name="what_is_your_nickname">What is your nickname</string>
     <string name="name">Name</string>
     <string name="done">Done</string>
+    <string name="box_one">Box one</string>
+    <string name="box_two">Box two</string>
+    <string name="box_three">Box three</string>
+    <string name="box_four">Box four</string>
+    <string name="box_five">Box five</string>
 </resources>
