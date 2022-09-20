@@ -1,37 +1,29 @@
 package org.sopt.diceroller
 
-import android.content.Context
 import android.os.Bundle
-import android.view.View
-import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import org.sopt.diceroller.base.BaseActivity
 import org.sopt.diceroller.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
-    private val myName = MyName("youngjin choi", "oznnni")
+class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
+    lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.myName = myName
 
-        binding.doneButton.setOnClickListener {
-            addNickname(it)
-        }
+        initLayout()
     }
 
-    private fun addNickname(view: View) {
-        binding.apply {
-            nicknameText.text = nicknameEdit.text
-            nicknameEdit.visibility = View.GONE
-            view.visibility = View.GONE
-            nicknameText.visibility = View.VISIBLE
+    private fun initLayout() {
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
+        NavigationUI.setupActionBarWithNavController(this, navController)
+    }
 
-        }
-
-        // Hide the keyboard.
-        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(view.windowToken, 0)
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()
     }
 }

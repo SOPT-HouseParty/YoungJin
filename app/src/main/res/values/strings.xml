@@ -12,4 +12,9 @@
     <string name="box_three">Box three</string>
     <string name="box_four">Box four</string>
     <string name="box_five">Box five</string>
+    <string name="play">play</string>
+    <string name="try_again">Try Again</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="won">won</string>
+    <string name="over">over</string>
 </resources>
